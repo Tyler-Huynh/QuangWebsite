@@ -1,18 +1,32 @@
+html{
+    scroll-behavior: smooth;
+}
     body{
-        margin: 0;
-        padding: 0;
-        background-image: url(/img/quang1.jpg);
-        background-size: cover;
-        background-repeat:no-repeat;
-        background-position: center;
+    font-size: 100%;
+    font-family: sans-serif;
     }
-    .navbar{
+
+    header{
+        width: 100%;
         display: flex;
         justify-content: space-between;
+        padding: 20px 50px;
         align-items: center;
-        background-color: rgba(0,0,0,.1);
+        position: fixed;
+        z-index: 999;
+       
+    }
+
+    .card{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .navbar{
+        background-color: rgba(0,0,0,.5);
         color: white;
-        position: sticky;
     }
 
     .brand-title {
@@ -48,56 +62,94 @@
     }
 
     .toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+        position: absolute;
+        top: .75rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
     }
 
     .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
     }
 
     @media (max-width: 800px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .toggle-button {
+            display: flex;
+        }
+
+        .navbar-links {
+            display: none;
+            width: 100%;
+        }
+
+        .navbar-links ul {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .navbar-links ul li {
+            text-align: center;
+        }
+
+        .navbar-links ul li a {
+            padding: .5rem 1rem;
+        }
+
+        .navbar-links.active {
+            display: flex;
+        }
     }
 
-    .toggle-button {
-        display: flex;
-    }
-
-    .navbar-links {
-        display: none;
+    section{
+        box-sizing:content-box;
         width: 100%;
+        float: left;
+        height: 100vh;
+        position: relative; 
+    }
+    
+    #main-body{
+        background-color: bisque;
+        padding-bottom: 30%;
     }
 
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
+    #top-page{
+        background-image: url(/img/quang1.jpg);
+        margin: 0;
+        padding: 0;
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: center;
     }
 
-    .navbar-links ul li {
-        text-align: center;
+    #recent-events{
+        background-color: burlywood;
     }
 
-    .navbar-links ul li a {
-        padding: .5rem 1rem;
+    h1{
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
     }
-
-    .navbar-links.active {
-        display: flex;
-    }
-    }
-
-    .containerC{
-        padding-top: 100%;
+    h2{ 
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 10%;
+        right: 10%;       
+        color:white;
     }
